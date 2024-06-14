@@ -69,6 +69,25 @@
     function gotounderweightvideo(){
         window.location.href="underweightvideo.html";
     }
+    function deactivate(){
+        var x = document.createElement("INPUT");
+  x.setAttribute("type", "gmail");
+  x.setAttribute("value", "enter your email");
+  document.body.appendChild(x);
+        var x1 = document.createElement("INPUT");
+  x1.setAttribute("type", "password");
+  x1.setAttribute("value", "enter your password");
+  document.body.appendChild(x1);
+    if(localStorage.getItem(x)===x){
+        window.location.href="index.html";
+        alert("click ok to deactive your account");
+    }
+        else if(!localStorage.getItem(x)){
+            alert("Invalid Email");
+        }
+        else{
+            alert("Invalid password")
+        }
     </script>
 </head>
 <body class="body1">
@@ -92,6 +111,7 @@
                 <a class="a" href="#" id="obesevideo" onclick="gotoobesevideo()"></a>
         </div> 
         <br><br><button onclick="gotohome()" class="buttondata">logout</button>
+        <br><br><button onclick="deactivate()">Deactivate My Account </button>
     </div> 
 </body>
 </html>

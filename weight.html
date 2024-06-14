@@ -70,11 +70,11 @@
         window.location.href="underweightvideo.html";
     }
     function deactivate(){
-        var x = document.createElement("INPUT");
+        var x = document.getElementById("email").createElement("INPUT");
   x.setAttribute("type", "gmail");
   x.setAttribute("value", "enter your email");
   document.body.appendChild(x);
-        var x1 = document.createElement("INPUT");
+        var x1 = document.getElementById("pass").createElement("INPUT");
   x1.setAttribute("type", "password");
   x1.setAttribute("value", "enter your password");
   document.body.appendChild(x1);
@@ -111,7 +111,9 @@
                 <a class="a" href="#" id="obesevideo" onclick="gotoobesevideo()"></a>
         </div> 
         <br><br><button onclick="gotohome()" class="buttondata">logout</button>
-        <br><br><button onclick="deactivate()">Deactivate My Account </button>
+        <br><br><button onclick="deactivate()" id="deac">Deactivate My Account </button>
+        <br><br><div id="email"></div>
+        <br><br><div id="pass"></div>
     </div> 
 </body>
 </html>

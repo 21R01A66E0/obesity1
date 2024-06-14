@@ -70,14 +70,16 @@
         window.location.href="underweightvideo.html";
     }
     function deactivate(){
-        var x = document.getElementById("email").createElement("INPUT");
+        var x = document.createElement("INPUT");
   x.setAttribute("type", "gmail");
   x.setAttribute("value", "enter your email");
   document.body.appendChild(x);
-        var x1 = document.getElementById("pass").createElement("INPUT");
+        var x1 = document.createElement("INPUT");
   x1.setAttribute("type", "password");
   x1.setAttribute("value", "enter your password");
   document.body.appendChild(x1);
+        document.getElementById('email").innerHTML=x;
+         document.getElementById('pass").innerHTML=x1;                        
     if(localStorage.getItem(x)===x){
         window.location.href="index.html";
         alert("click ok to deactive your account");

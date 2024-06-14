@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded',function(){
         if(localStorage.getItem(email)===password){
             window.location.href="weight.html";
         }
+        else if(!localStorage.getItem(email)){
+            alert("No email found please register");
+        }
         else {
             alert('invalid password.please enter correct password');
             password='';

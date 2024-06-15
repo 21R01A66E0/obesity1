@@ -26,6 +26,7 @@
     </style>
     <script>
         function deactivate(){
+            document.getElementById("ahide").style.display='none';
             document.getElementById("weightForm").style.display='none';
             document.getElementById("deac").style.display='none';
             document.getElementById("hideheading").style.display='none';
@@ -137,12 +138,14 @@
                     <button type="submit">Check BMI</button>
                 </form>
                  <div class="heading" id="heading"></div>
-                <div id="bmiResult"></div><br>
-                <a class="a" href="#" id="underweight" onclick="gotounderweight()"></a><br><br>
-                <a class="a" href="#" id="underweightvideo" onclick="gotounderweightvideo()"></a>
-                <a class="a" href="#" id="overweight" onclick="gotooverweight()"></a>
-                <a class="a" href="#" id="obese" onclick="gotoobese()"></a><br><br>
-                <a class="a" href="#" id="obesevideo" onclick="gotoobesevideo()"></a>
+                <div id="ahide>
+                    <div id="bmiResult"></div><br>
+                    <a class="a" href="#" id="underweight" onclick="gotounderweight()"></a><br><br>
+                    <a class="a" href="#" id="underweightvideo" onclick="gotounderweightvideo()"></a>
+                    <a class="a" href="#" id="overweight" onclick="gotooverweight()"></a>
+                    <a class="a" href="#" id="obese" onclick="gotoobese()"></a><br><br>
+                    <a class="a" href="#" id="obesevideo" onclick="gotoobesevideo()"></a>
+                </div>
             </div> 
             <br><br><button onclick="gotohome()" id="hidebutton" class="buttondata">logout</button>
         </div>

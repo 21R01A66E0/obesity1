@@ -22,6 +22,7 @@
         }
         .a{
             font-size: 20px;
+            display: none; /* Hide anchor tags by default */
         }
     </style>
     <script>
@@ -77,16 +78,21 @@
             if (bmi < 18.5) {
                 bmiCategory = 'Underweight';
                 document.getElementById('underweight').innerHTML = "Tips to overcome underweight issues";
+                document.getElementById('underweight').style.display = 'block'; // Show anchor tag
                 document.getElementById('underweightvideo').innerHTML = "Videos to overcome underweight issues";
+                document.getElementById('underweightvideo').style.display = 'block'; // Show anchor tag
             } else if (bmi >= 18.5 && bmi < 24.9) {
                 bmiCategory = 'Normal weight';
             } else if (bmi >= 25 && bmi < 29.9) {
                 bmiCategory = 'Overweight';
                 document.getElementById('overweight').innerHTML = "Tips to overcome overweight issues";
+                document.getElementById('overweight').style.display = 'block'; // Show anchor tag
             } else {
                 bmiCategory = 'Obese';
                 document.getElementById('obese').innerHTML = "Tips to overcome obesity issues";
+                document.getElementById('obese').style.display = 'block'; // Show anchor tag
                 document.getElementById('obesevideo').innerHTML = "Videos to overcome obesity issues";
+                document.getElementById('obesevideo').style.display = 'block'; // Show anchor tag
             }
 
             bmiResult.innerHTML = `<p>Your BMI is ${bmi} (${bmiCategory}).</p>`;
@@ -127,7 +133,7 @@
     <div id="hide">
         <div class="body1">
             <div class="h1data">
-                <h1  id="hideheading">Check Your Weight</h1>
+                <h1 id="hideheading">Check Your Weight</h1>
                 <form id="weightForm">
                     <label for="weight">Enter your weight (kg):</label>
                     <input type="number" id="weight" placeholder="enter your weight" required>
@@ -137,8 +143,8 @@
                     <br><br>
                     <button type="submit">Check BMI</button>
                 </form>
-                 <div class="heading" id="heading"></div>
-                <div id="ahide>
+                <div class="heading" id="heading"></div>
+                <div id="ahide">
                     <div id="bmiResult"></div><br>
                     <a class="a" href="#" id="underweight" onclick="gotounderweight()"></a><br><br>
                     <a class="a" href="#" id="underweightvideo" onclick="gotounderweightvideo()"></a>
